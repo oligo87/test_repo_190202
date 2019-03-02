@@ -9,8 +9,8 @@ print('\n')
 for i in hero:
     print('{0:10}	{1}'.format(i, hero[i]))
 
-hero['age'] = input('\nEnter new Age of {0} {1}: '.format(hero['name'],hero['lastname']))
-hero['profession'] = input('Enter new Profession of {0} {1}: '.format(hero['name'],hero['lastname']))
+hero['age'] = input('\nEnter new Age of {0} {1}: '.format(hero['name'], hero['lastname']))
+hero['profession'] = input('Enter new Profession of {0} {1}: '.format(hero['name'], hero['lastname']))
 
 print('\n')
 for i in hero:
