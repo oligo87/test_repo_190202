@@ -6,6 +6,7 @@ def distance(x1, y1, x2, y2):
     a = ((x2 - x1)**2 + (y2 - y1)**2)**(1/2)
     return a
 
+
 if __name__ == '__main__':
     x1 = int(input('Print the x1 point: '))
     y1 = int(input('Print the y1 point: '))
