@@ -1,3 +1,0 @@
-test 3
-string
-string for hometask edit 3
