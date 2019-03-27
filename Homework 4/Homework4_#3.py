@@ -18,6 +18,10 @@ class TestYear(unittest.TestCase):
         res = is_year_leap(2004)
         self.assertEqual(res, True)
 
+    def test_2001(self):
+        res = is_year_leap(2001)
+        self.assertEqual(res, False)
+
 
 class TestTriangle(unittest.TestCase):
 
@@ -29,12 +33,28 @@ class TestTriangle(unittest.TestCase):
         res = is_triangle_exist(2, 1, 1)
         self.assertEqual(res, False)
 
+    def test_1_2_1(self):
+        res = is_triangle_exist(1, 2, 1)
+        self.assertEqual(res, False)
+
+    def test_1_1_2(self):
+        res = is_triangle_exist(1, 1, 2)
+        self.assertEqual(res, False)
+
     def test_1_1_1(self):
         res = is_triangle_exist(1, 1, 1)
         self.assertEqual(res, True)
 
+    def test_floats(self):
+        res = is_triangle_exist(2.7, 1.5, 1.25)
+        self.assertEqual(res, True)
+
+    def test_negatives(self):
+        res = is_triangle_exist(-2, -1, -1)
+        self.assertEqual(res, False)
+
     def test_not_triangle(self):
-        res = triangle_type(0, 0, 0)
+        res = triangle_type(0.45, 0, -4)
         self.assertEqual(res, 'Not a triangle')
 
     def test_Isosceles(self):
@@ -42,7 +62,7 @@ class TestTriangle(unittest.TestCase):
         self.assertEqual(res, 'Isosceles triangle')
 
     def test_Equilateral(self):
-        res = triangle_type(6, 6, 6)
+        res = triangle_type(6.75, 6.75, 6.75)
         self.assertEqual(res, 'Equilateral triangle')
 
     def test_Versatile(self):
